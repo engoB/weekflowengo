@@ -3,20 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Politique de confidentialité — Week Flow Engo</title>
+<title>Politique de confidentialité / Privacy Policy — Week Flow Engo</title>
 <style>
   body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6;color:#2d1f0e;background:#f5f0e8;}
   h1{font-size:26px;margin-bottom:4px;}
-  .updated{color:#8a7a65;font-size:14px;margin-bottom:32px;}
+  .updated{color:#8a7a65;font-size:14px;margin-bottom:20px;}
   h2{font-size:18px;margin-top:32px;border-bottom:2px solid #d4c9b0;padding-bottom:6px;}
   ul{padding-left:22px;}
   li{margin-bottom:6px;}
   .highlight{background:#e6f7e5;border:2px solid #3d9e36;border-radius:10px;padding:14px 18px;margin:20px 0;font-weight:600;}
   code{background:#f0ebe0;padding:2px 6px;border-radius:4px;font-size:13px;}
   footer{margin-top:40px;padding-top:16px;border-top:2px solid #d4c9b0;color:#8a7a65;font-size:13px;}
+  .lang-switch{display:flex;gap:6px;margin-bottom:24px;}
+  .lang-btn{
+    border:2px solid #d4c9b0;background:#f0ebe0;color:#2d1f0e;
+    border-radius:8px;padding:6px 14px;font-size:13px;font-weight:800;cursor:pointer;font-family:inherit;
+  }
+  .lang-btn.active{background:#3d9e36;color:#fff;border-color:#3d9e36;}
+  [data-lang="en"]{display:none;}
+  body.lang-en [data-lang="fr"]{display:none;}
+  body.lang-en [data-lang="en"]{display:block;}
+  body.lang-en li[data-lang="en"]{display:list-item;}
 </style>
 </head>
 <body>
+
+<div class="lang-switch">
+  <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')">🇫🇷 Français</button>
+  <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 English</button>
+</div>
+
+<!-- ═══════════════ FRANÇAIS ═══════════════ -->
+<div data-lang="fr">
 
 <h1>Politique de confidentialité — Week Flow Engo</h1>
 <p class="updated">Dernière mise à jour : 2 juillet 2026</p>
@@ -64,9 +82,83 @@ En résumé : Week Flow Engo ne collecte, ne stocke sur un serveur, ni ne transm
 <p>Toute modification future de cette politique sera publiée sur cette même page, avec mise à jour de la date ci-dessus.</p>
 
 <h2>Contact</h2>
-<p>Pour toute question concernant cette politique : <em>[sebastienkhai@gmail.com]</em></p>
+<p>Pour toute question concernant cette politique : <em>[TON EMAIL DE CONTACT ICI]</em></p>
 
 <footer>Week Flow Engo — planificateur de sprint hebdomadaire personnel.</footer>
+
+</div>
+
+<!-- ═══════════════ ENGLISH ═══════════════ -->
+<div data-lang="en">
+
+<h1>Privacy Policy — Week Flow Engo</h1>
+<p class="updated">Last updated: July 2, 2026</p>
+
+<div class="highlight">
+In short: Week Flow Engo does not collect, store on a server, or transmit any personal data. Everything stays on your device.
+</div>
+
+<h2>What data is stored, and where</h2>
+<p>Week Flow Engo is a task-planning Chrome extension that runs entirely locally. The following data is saved <strong>only in the user's browser</strong>, via the <code>chrome.storage.local</code> and <code>localStorage</code> APIs:</p>
+<ul>
+  <li>Tasks created by the user (title, description, category, priority, day, tags, notes)</li>
+  <li>Custom categories and their colors</li>
+  <li>Display preferences (theme, font, language, daily capacity)</li>
+  <li>Notification settings (enabled state, reminder time)</li>
+  <li>Past sprint history, generated automatically from the tasks above</li>
+</ul>
+<p>None of this data is ever sent to a server, remote database, or third-party service. The extension has no server at all — it does not communicate with any external network address.</p>
+
+<h2>Permissions used, and why</h2>
+<ul>
+  <li><strong>storage</strong> — save the user's tasks and preferences locally.</li>
+  <li><strong>notifications</strong> — show an optional end-of-day reminder, configured and enabled by the user themselves.</li>
+  <li><strong>contextMenus</strong> — add a right-click menu item letting the user create a task from selected text on a web page.</li>
+  <li><strong>alarms</strong> — schedule the daily check for the end-of-day reminder, at the time chosen by the user.</li>
+</ul>
+
+<h2>What Week Flow Engo does not do</h2>
+<ul>
+  <li>Does not collect any personally identifiable information</li>
+  <li>Does not use any analytics or tracking tools</li>
+  <li>Does not display any advertising</li>
+  <li>Does not share or sell any data to third parties</li>
+  <li>Does not require any account or login</li>
+  <li>Does not read the content of visited web pages (the right-click feature only transmits text explicitly selected by the user, locally)</li>
+</ul>
+
+<h2>Control over your data</h2>
+<p>A built-in export button lets you download all your data (tasks, colors, preferences) as JSON, for backup or transfer to another device. Uninstalling the extension permanently deletes all locally stored data.</p>
+
+<h2>Children</h2>
+<p>Week Flow Engo is not directed at children and does not knowingly collect data from anyone, regardless of age, since no data is collected from anyone at all.</p>
+
+<h2>Changes to this policy</h2>
+<p>Any future change to this policy will be published on this same page, with the date above updated accordingly.</p>
+
+<h2>Contact</h2>
+<p>For any question about this policy: <em>[sebastienkhai@gmail.com]</em></p>
+
+<footer>Week Flow Engo — personal weekly sprint planner.</footer>
+
+</div>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('lang-en', lang === 'en');
+  document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.documentElement.lang = lang;
+  try{ localStorage.setItem('wfe_privacy_lang', lang); }catch(e){}
+}
+// Se souvient du choix, et respecte la langue du navigateur au premier passage.
+(function(){
+  let lang = 'fr';
+  try{ lang = localStorage.getItem('wfe_privacy_lang'); }catch(e){}
+  if(!lang) lang = (navigator.language||'fr').toLowerCase().startsWith('en') ? 'en' : 'fr';
+  setLang(lang);
+})();
+</script>
 
 </body>
 </html>
