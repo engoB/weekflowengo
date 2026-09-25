@@ -1,12 +1,12 @@
 <p align="center"><img src=".github/readme/banner.jpg" alt="Planner Week Flow — Planifier sa semaine en sprints, directement dans Chrome." width="100%"></p>
 
 <p align="center">
-  <img alt="Statut" src="https://img.shields.io/badge/Statut-En_construction-d97706?style=for-the-badge&labelColor=0b0b0f">
-  <a href="https://engob.github.io/portofolio/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-S%C3%A9bastien_Khai-4f46e5?style=for-the-badge&labelColor=0b0b0f"></a>
+  <a href="https://engob.github.io/portofolio/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-Senshi_Kabai-4f46e5?style=for-the-badge&labelColor=0b0b0f"></a>
 </p>
 
 <h1 align="center">Planner Week Flow</h1>
 <p align="center"><b>Planifier sa semaine en sprints, directement dans Chrome.</b><br>Une extension de planification hebdomadaire : tâches, catégories, priorités et historique des sprints, entièrement en local.</p>
+<p align="center"><sub>Statut : <b>En construction</b></sub></p>
 
 ---
 
@@ -36,4 +36,4 @@ Task managers are often too heavy just to organise your week. Apply sprint logic
 
 ---
 
-<p align="center"><sub>Conçu, développé et mis en ligne par <b>Sébastien Khai</b>, Product Builder · <a href="https://engob.github.io/portofolio/">portfolio</a> · <a href="https://engob.github.io/portofolio/">fiche du projet</a><br>© 2026 Sébastien Khai — tous droits réservés.</sub></p>
+<p align="center"><sub>Conçu, développé et mis en ligne par <b>Senshi Kabai</b>, Product Builder · <a href="https://engob.github.io/portofolio/">portfolio</a> · <a href="https://engob.github.io/portofolio/">fiche du projet</a><br>© 2026 Senshi Kabai — tous droits réservés.</sub></p>
